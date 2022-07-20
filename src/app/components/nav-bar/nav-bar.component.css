@@ -1,0 +1,15 @@
+.clickable {
+  cursor: pointer;
+}
+
+.bg-dark{
+  background-color: #6c9b9b !important;
+}
+
+
+div, ul {
+  font-family: 'Open sans', sans-serif;
+}
+
+
+

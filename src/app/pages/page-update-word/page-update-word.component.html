@@ -1,0 +1,45 @@
+<h1 class="text-center">Modifier le mot</h1>
+<form
+  *ngIf="updateWordForm"
+  class="mt-5 col-md-6 m-auto"
+  [formGroup]="updateWordForm"
+  (ngSubmit)="onSubmitForm()"
+>
+  <div class="mb-3">
+    <label for="word" class="form-label">Mot</label>
+    <div class="input-group">
+      <input
+        placeholder="Entrer le nouveau mot"
+        formControlName="word"
+        type="text"
+        class="form-control"
+        aria-describedby="userHelp"
+        id="word"
+      />
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="link" class="form-label">Link</label>
+    <div class="input-group">
+      <input
+        placeholder="Entrer le nouveau lien"
+        formControlName="link"
+        type="text"
+        class="form-control"
+        aria-describedby="userHelp"
+        id="link"
+      />
+    </div>
+  </div>
+
+  <div class="d-grid col-12 col-md-2 ms-auto">
+    <button
+      [disabled]="updateWordForm.invalid"
+      type="submit"
+      class="btn btn-primary text-nowrap"
+    >
+      Modifier
+    </button>
+  </div>
+</form>

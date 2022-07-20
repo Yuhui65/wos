@@ -1,0 +1,30 @@
+<h1 class="text-center">Chercher un mot en LSF</h1>
+<div style="padding-left: 40px; padding-right: 40px;">
+  <form class="d-flex" [formGroup]="keywordForm" (ngSubmit)="onSubmitForm()">
+      <input class="form-control me-2" type="search" formControlName="keyword" id="keyword" placeholder="Chercher un mot" aria-label="Search">
+      <button class="btn btn-success" type="submit">Chercher</button>
+</form>
+</div>
+<article class="pt-2 table-responsive-sm" style="padding-left: 40px; padding-right: 40px;">
+    <table class="table table-bordered table-striped table-hover">
+        <caption>Sources vidéos: Youtube & LeDicoElix</caption>
+        <thead class="table-dark border">
+            <tr>
+                <th class="col-2">Mot</th>
+                <th class="col-2">Signe</th>
+            </tr>
+        </thead>
+        <tbody class="border">
+            <tr *ngFor="let word of listWords">
+                <td class="text-nowrap fw-bold">
+                    {{word.word}}
+                </td>
+                <td>
+                  <button class="btn btn-warning" routerLink="/video/{{ word.id }}">
+                    Vidéo
+                  </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>

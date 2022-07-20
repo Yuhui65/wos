@@ -1,0 +1,18 @@
+.table-bg{
+  background-color: #1898bd !important;
+}
+
+.table-dark {
+  background-color: #1898bd !important;
+}
+
+.table {
+  background-color: lightblue;
+}
+
+div,
+ul,
+h1,
+input {
+  font-family: 'Open sans', sans-serif;
+}

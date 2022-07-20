@@ -1,0 +1,20 @@
+<h1 class="text-center">Créer de nouveau mot</h1>
+<form class="mt-5 col-md-6 m-auto" [formGroup]="newWordForm" (ngSubmit)="onSubmitForm()">
+  <div class="mb-3">
+    <label for="word" class="form-label">Mot</label>
+    <div class="input-group">
+      <input placeholder="Entrer le nouveau mot" formControlName="word" type="text" class="form-control" aria-describedby="userHelp" id="word">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="link" class="form-label">Lien</label>
+    <div class="input-group">
+      <input placeholder="Entrer le lien du nouveau mot" formControlName="link" type="text" class="form-control" aria-describedby="userHelp" id="link">
+    </div>
+  </div>
+
+
+  <div class="d-grid col-12 col-md-2 ms-auto">
+    <button [disabled]="newWordForm.invalid" type="submit" class="btn btn-primary text-nowrap">Créer</button>
+  </div>
+</form>

@@ -1,0 +1,40 @@
+<h1 class="text-center">Liste des mots</h1>
+
+  <article class="pt-2 table-responsive-sm" style="padding-left: 40px; padding-right: 40px;">
+  <table class="table table-bordered table-striped table-hover">
+  <thead class="table-dark border">
+    <tr>
+      <th>Id</th>
+      <th>Word</th>
+      <th>Lien</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let word of listWords">
+      <td>{{ word.id }}</td>
+      <td class="text-nowrap fw-bold">{{ word.word }}</td>
+      <td class="text-nowrap">{{ word.link }}</td>
+      <td>
+        <button
+          class="btn btn-warning"
+          routerLink="/update-word/{{ word.id }}">
+          Modifier
+        </button>
+      </td>
+      <td>
+         <button
+          class="btn btn-danger"
+          (click)="onClickDeleteWord(word.id)"
+          >
+          Supprimer
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</article>
+
+
